@@ -363,54 +363,6 @@ nav {
     margin-bottom: 10px;
 }
 
-/* Proyectos */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.project-card {
-    background-color: var(--white);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-.project-image {
-    height: 200px;
-    background-color: var(--secondary-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--primary-color);
-    font-size: 4rem;
-}
-
-.project-content {
-    padding: 20px;
-}
-
-.project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 15px;
-}
-
-.project-tag {
-    background-color: var(--light-bg);
-    padding: 5px 12px;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    color: var(--text-light);
-}
 
 /* Contacto */
 .contact-content {
@@ -603,3 +555,4 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
