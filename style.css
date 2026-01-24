@@ -370,10 +370,13 @@ nav {
     color: var(--text-color);
 }
 
+
+
+
 /* Timeline */
 .timeline {
     position: relative;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -385,31 +388,48 @@ nav {
     bottom: 0;
     width: 2px;
     background-color: var(--border-color);
+    display: none;
 }
 
 .timeline-item {
     display: flex;
-    margin-bottom: 40px;
+    border-bottom: none;
+    margin-bottom: 20px;
+    padding-bottom: 0;
     position: relative;
 }
 
 .timeline-date {
-    width: 120px;
+    width: auto;
     padding-right: 20px;
-    text-align: right;
+    text-align: left    ;
     font-weight: 600;
     color: var(--primary-color);
     flex-shrink: 0;
+    font-size: 1rem;
+    color: #666666;
+    order: 2; /* Fecha a la derecha */
+    margin-left: auto;
 }
 
 .timeline-content {
     flex: 1;
     padding-left: 30px;
     position: relative;
+     padding-left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    order: 1; /* Título primero */
 }
 
 .timeline-content::before {
     content: '';
+    display: none; /* Oculta el punto */
     position: absolute;
     left: -8px;
     top: 5px;
@@ -419,10 +439,66 @@ nav {
     background-color: var(--primary-color);
 }
 
+.timeline-content p {
+    order: 4; /* Descripción al final */
+    max-width: 700px;
+}
 .company {
+font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    font-style: normal;
+    margin-bottom: 15px;
+    order: 3; /* Compañía después del título */
+}
+
+/* Proyectos */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+    height: 200px;
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 4rem;
+}
+
+.project-content {
+    padding: 20px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.project-tag {
+    background-color: var(--light-bg);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
     color: var(--text-light);
-    font-style: italic;
-    margin-bottom: 10px;
 }
 
 /* Contacto */
