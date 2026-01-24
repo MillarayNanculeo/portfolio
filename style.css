@@ -37,6 +37,8 @@ body {
     padding: 0 20px;
 }
 
+
+
 /* Tipografía */
 h1, h2, h3 {
     font-weight: 900;
@@ -175,10 +177,10 @@ nav {
 .hero {
     display: flex;
     align-items: center;
-    min-height: 100vh;
     padding: 100px 0px 50px;
     max-width: 1200px;
     margin: 0 auto;
+        padding-bottom: 0 !important;
 }
 
 .hero-content {
@@ -224,9 +226,8 @@ nav {
 
 /* Secciones */
 .section {
-    padding: 80px 0;
+    padding: 80px 80px;
     background-color: #1d151a;
-    text-align: center;
     
 }
 
@@ -243,7 +244,10 @@ nav {
 .about-content {
     display: flex;
     gap: 50px;
-    align-items: flex-start;
+    flex-direction: row; /* Imagen y texto en fila */
+    align-items: flex-start; /* Alinea al inicio */
+    gap: 60px; /* Espacio entre texto e imagen */
+    margin-top: 40px;
     color:#ffffff;
      font-weight: 300;
 }
@@ -253,12 +257,11 @@ nav {
 }
 
 .about-text {
-    flex: 2;
+    flex: 1;
     font-size: 1.1rem;
-        padding-left: 150px;
-    padding-right: 150px;
     max-width: 1200px;
     margin: 0 auto;
+    min-width: 0; /* Para que el texto no desborde */
 }
 
 .about-stats {
@@ -266,6 +269,65 @@ nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+}
+
+.about-image {
+    flex: 0 0 auto; /* Tamaño fijo, no crece ni encoge */
+    width: 400px; /* Ancho fijo para la imagen */
+    position: relative;
+}
+
+.about-imageone{
+    width: 300px;
+    height: auto;
+    border-radius: 0px;
+    object-fit: cover;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+}
+
+.about-imageone:hover {
+    transform: scale(1.03);
+}
+
+/* Decoración opcional */
+.image-decoration {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, var(--primary-color), transparent);
+    z-index: -1;
+    opacity: 0.1;
+}
+
+/* Habilidades - debajo del texto */
+.skills {
+    margin-top: 40px;
+}
+
+/* Para móviles: cambiar a columna */
+@media (max-width: 992px) {
+    .about-content {
+        flex-direction: column; /* Cambia a columna en móviles */
+        gap: 40px;
+        justify-content: space-between;
+    }
+    
+    .about-image {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        order: -1; /* Opcional: poner imagen arriba en móviles */
+    }
+    
+    .about-text {
+        max-width: 700px; /* Limita el ancho del texto */
+        line-height: 1.8; /* Mejor interlineado */
+        font-size: 1.1rem; /* Tamaño de fuente ligeramente mayor */
+    }
 }
 
 .stat-item {
@@ -362,7 +424,6 @@ nav {
     font-style: italic;
     margin-bottom: 10px;
 }
-
 
 /* Contacto */
 .contact-content {
@@ -555,4 +616,7 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+
+
 
