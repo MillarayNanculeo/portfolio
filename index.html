@@ -163,11 +163,9 @@ document.head.appendChild(style);
             </button>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#experiencia">Experiencia</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#sobre-mi">Ayudantías</a></li>
-                <li><a href="mailto:javiera2000silva@gmail.com?subject=Consulta%20portafolio&body=Hola%20Javiera,%0D%0A%0D%0AVi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20contigo%20sobre%20tu%20trabajo.%0D%0A%0D%0ASaludos," target="_blank" rel="noopener noreferrer"> 
-                                        Contacto</a></li>
+                <li><a href="#contacto" >        Contacto</a></li>
             </ul>
         </div>
     </nav>
@@ -255,51 +253,6 @@ document.head.appendChild(style);
     </div>
 </section>
 
-    <!-- Sección Experiencia -->
-    <section id="experiencia" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Experiencia</h2>
-            <div class="timeline">
-
-                <div class="timeline-item">
-                    <div class="timeline-date">Marzo 2025 - Diciembre 2025</div>
-                    <div class="timeline-content">
-                        <h3>Ayudante de Docencia</h3>
-                        <div class="company">Universidad de Chile</div>
-                        <p>Co-diseño y planificación curricular, facilitar sesiones teórico-prácticas y realizar retroalimentación constructiva y personalizada en los proyectos estudiantiles.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">2024 - 2025</div>
-                    <div class="timeline-content">
-                        <h3>Diseñadora Gráfica</h3>
-                        <div class="company">Fundación Círculo Polar</div>
-                        <p>Diseño y adaptación de material gráfico accesible y sensible para el programa de prevención del suicidio.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">Mayo 2023</div>
-                    <div class="timeline-content">
-                        <h3>Diseñadora Web</h3>
-                        <div class="company">Agencia Somos Fuego</div>
-                        <p>Encargada del rediseño y mejora funcional del sitio web oficial del festival musical Chilean Wey.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">Junio 2022 - Septiembre22</div>
-                    <div class="timeline-content">
-                        <h3>Diseñadora Asistente</h3>
-                        <div class="company">Defensoría de la niñez</div>
-                        <p>Adaptación de la ilustración institucional para crear piezas informativas (infografías, cápsulas) que faciliten la comprensión de temas críticos en tornos a los derechos de NNA</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
 
     <!-- Sección Proyectos -->
     <section id="proyectos" class="section-proyectos">
@@ -373,15 +326,12 @@ document.head.appendChild(style);
                     <div class="contact-details">
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
-                            <span>hola@miportafolio.com</span>
+                            <span>javiera2000silva@gmail.com</span>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+1 (555) 123-4567</span>
-                        </div>
+
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Ciudad, País</span>
+                            <span>Santiago, Chile</span>
                         </div>
                     </div>
                     <div class="social-links">
@@ -390,18 +340,21 @@ document.head.appendChild(style);
                         <a href="https://www.behance.net/millarasilva" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-behance"></i></a>
                     </div>
                 </div>
-                <form id="contactForm" class="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" placeholder="Tu nombre" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" placeholder="Tu correo electrónico" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" rows="5" placeholder="Tu mensaje" required></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary">Enviar mensaje</button>
-                </form>
+                <form id="contactForm" class="contact-form" action="https://formspree.io/f/xdaejjkl" method="POST">
+    <input type="hidden" name="_subject" value="Nuevo mensaje del portafolio">
+    <input type="hidden" name="_replyto" value="%EMAIL%"> <!-- Esto se llenará automáticamente -->
+    
+    <div class="form-group">
+        <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+    </div>
+    <div class="form-group">
+        <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+    </div>
+    <div class="form-group">
+        <textarea id="message" name="message" rows="5" placeholder="Tu mensaje" required></textarea>
+    </div>
+    <button type="submit" class="btn-primary">Enviar mensaje</button>
+</form>
             </div>
         </div>
     </section>
