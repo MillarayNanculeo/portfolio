@@ -1,4 +1,4 @@
-      /* Reset y estilos base */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +9,7 @@
     --primary-color: #999693;
     --primary-dark: #000000;
     --secondary-color: #f3f4f6;
-    --text-color: #1f2937;
+    --text-color: #1d151a;
     --text-light: #6b7280;
     --light-bg: #f9fafb;
     --white: #ffffff;
@@ -70,7 +70,7 @@ a {
 /* Botones */
 .btn-primary, .btn-secondary {
     display: inline-block;
-    padding: 12px 28px;
+    padding: 8px 28px;
     border-radius: 50px;
     font-weight: 600;
     text-align: center;
@@ -178,9 +178,9 @@ nav {
     display: flex;
     align-items: center;
     padding: 100px 0px 50px;
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
-        padding-bottom: 0 !important;
+    padding-bottom: 0 !important;
 }
 
 .hero-content {
@@ -200,10 +200,10 @@ nav {
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
-    color: var(--text-light);
+    font-size: 1rem;
+    color: var(--primary-color) ;
     margin-bottom: 1.5rem;
-    font-weight: 700;
+    font-weight: 900;
 }
 
 .hero-description {
@@ -227,12 +227,11 @@ nav {
 /* Secciones */
 .section {
     padding: 80px 80px;
-    background-color: #1d151a;
     
 }
 
 .section-title {
-    text-align: center;
+    text-align: left;
     margin-bottom: 50px;
 }
 
@@ -241,6 +240,10 @@ nav {
 }
 
 /* Sobre mí */
+
+
+
+
 .about-content {
     display: flex;
     gap: 50px;
@@ -248,12 +251,13 @@ nav {
     align-items: flex-start; /* Alinea al inicio */
     gap: 60px; /* Espacio entre texto e imagen */
     margin-top: 40px;
-    color:#ffffff;
-     font-weight: 300;
+
 }
 
+  
 .h2white {
-     color:#ffffff;
+     color:var(--text-color);
+     
 }
 
 .about-text {
@@ -261,6 +265,8 @@ nav {
     font-size: 1.1rem;
     max-width: 1200px;
     margin: 0 auto;
+        line-height: 1.8;
+
     min-width: 0; /* Para que el texto no desborde */
 }
 
@@ -271,23 +277,95 @@ nav {
     gap: 20px;
 }
 
-.about-image {
-    flex: 0 0 auto; /* Tamaño fijo, no crece ni encoge */
-    width: 400px; /* Ancho fijo para la imagen */
-    position: relative;
+
+.skills-column {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 500px; /* Ancho máximo para la columna de habilidades */
 }
 
-.about-imageone{
-    width: 300px;
-    height: auto;
-    border-radius: 0px;
-    object-fit: cover;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    transition: transform 0.5s ease;
+.skills-title {
+    color:var(--text-color);
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    text-align: left;
+    font-weight: 900;
+    margin-bottom: 50px;
 }
 
-.about-imageone:hover {
-    transform: scale(1.03);
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.skill-tag {
+    background-color: rgba(153, 150, 147, 0.2); /* Usando el color primario con transparencia */
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-size: 1rem;
+    color: #ffffff;
+    border: 1px solid rgba(153, 150, 147, 0.4);
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.skill-tag:hover {
+    background-color: rgba(153, 150, 147, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive para móviles */
+@media (max-width: 992px) {
+    .about-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .skills-column {
+        width: 100%;
+        max-width: 100%;
+        order: 1; /* Habilidades primero en móvil */
+    }
+    
+    .about-text {
+        order: 2; /* Sobre mí después en móvil */
+        max-width: 100%;
+    }
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 20px;
+    }
+    
+    .skills-column {
+        padding: 20px;
+    }
+    
+    .skill-tag {
+        padding: 8px 16px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .skill-tags {
+        gap: 8px;
+    }
+    
+    .skill-tag {
+        padding: 6px 14px;
+        font-size: 0.9rem;
+    }
+    
+    .skills-title {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
 }
 
 /* Decoración opcional */
@@ -694,5 +772,128 @@ footer {
 }
 
 
+/* ============================================
+   CAROUSEL "PORTFOLIO" REPETIDO
+   ============================================ */
+
+.portfolio-carousel-container {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background-color: #1d151a;
+}
 
 
+.portfolio-carousel-container::before {
+    left: 0;
+    background: linear-gradient(to right, 
+        #1d151a 0%, 
+        rgba(29, 21, 26, 0.8) 50%,
+        rgba(29, 21, 26, 0) 100%);
+}
+
+.portfolio-carousel-container::after {
+    right: 0;
+    background: linear-gradient(to left, 
+        #1d151a 0%,     
+        rgba(29, 21, 26, 0.8) 50%,
+        rgba(29, 21, 26, 0) 100%);
+}
+
+.portfolio-carousel {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Fila de texto */
+.portfolio-track {
+    display: flex;
+    gap: 40px;
+    animation: scrollPortfolio 40s linear infinite;
+    width: max-content;
+}
+
+/* Dirección contraria para segunda fila */
+.portfolio-track.reverse {
+    animation: scrollPortfolioReverse 35s linear infinite;
+}
+
+/* Cada texto "portafolio" */
+.portfolio-text {
+    flex-shrink: 0;
+    color: white; /* Color tipografía */
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: 'Lato', sans-serif;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover sutil */
+.portfolio-text:hover {
+    color: rgba(153, 150, 147, 0.5);
+    transform: scale(1.05);
+}
+
+/* Animaciones */
+@keyframes scrollPortfolio {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-50% - 20px));
+    }
+}
+
+@keyframes scrollPortfolioReverse {
+    0% {
+        transform: translateX(calc(-50% - 20px));
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .portfolio-carousel-container {
+        margin: 40px 0;
+        padding: 30px 0;
+    }
+    
+    .portfolio-text {
+        font-size: 3rem;
+        gap: 25px;
+    }
+    
+    .portfolio-track {
+        gap: 25px;
+        animation: scrollPortfolio 30s linear infinite;
+    }
+    
+    .portfolio-track.reverse {
+        animation: scrollPortfolioReverse 25s linear infinite;
+    }
+    
+    .portfolio-carousel-container::before,
+    .portfolio-carousel-container::after {
+        width: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-text {
+        font-size: 2.2rem;
+    }
+    
+    .portfolio-track {
+        gap: 20px;
+    }
+}
