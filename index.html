@@ -13,7 +13,9 @@
 
 
 <script>
+    // DOM Ready
 document.addEventListener('DOMContentLoaded', function() {
+    // Actualizar año en el footer
     document.getElementById('currentYear').textContent = new Date().getFullYear();
     
     // Toggle del menú móvil
@@ -164,8 +166,8 @@ document.head.appendChild(style);
                 <li><a href="#experiencia">Experiencia</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#sobre-mi">Ayudantías</a></li>
-                <li><a href="mailto:javiera2000silva@gmail.com?subject=Consulta%20portafolio&body=Hola%20Javiera,%0D%0A%0D%0AVi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20contigo%20sobre%20tu%20trabajo.%0D%0A%0D%0ASaludos,">
-                Contacto</a></li>
+                <li><a href="mailto:javiera2000silva@gmail.com?subject=Consulta%20portafolio&body=Hola%20Javiera,%0D%0A%0D%0AVi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20contigo%20sobre%20tu%20trabajo.%0D%0A%0D%0ASaludos," target="_blank" rel="noopener noreferrer"> 
+                                        Contacto</a></li>
             </ul>
         </div>
     </nav>
@@ -242,9 +244,9 @@ document.head.appendChild(style);
                     <span class="skill-tag">Docencia</span>
                     <span class="skill-tag">Prototipado</span>
                     <span class="skill-tag">Investigación de usuarios</span>
-                    <span class="skill-tag">Diseño Responsivo</span>
+                    <span class="skill-tag">Redes Sociales</span>
                     <span class="skill-tag">UX/UI Design</span>
-                    <span class="skill-tag">Figma</span>
+                    <span class="skill-tag">Comunicación</span>
                     <span class="skill-tag">Diseño Gráfico</span>
                     <span class="skill-tag">Comunicación Visual</span>
                 </div>
@@ -299,7 +301,66 @@ document.head.appendChild(style);
         </div>
     </section>
 
-   
+    <!-- Sección Proyectos -->
+    <section id="proyectos" class="section-proyectos">
+    <div class="container">
+        <h2 class="section-title">Proyectos</h2>
+
+        <div class="proyectos-lista zig-zag">
+
+            <!-- Proyecto 1 -->
+<!-- Proyecto 1 - Imagen IZQUIERDA / Texto DERECHA -->
+            <div class="proyecto-item">
+                <div class="proyecto-imagen-contenedor">
+                    <img src="img/proyecto1.jpg" alt="Click Battle - Rediseño UX/UI" class="proyecto-imagen">
+                </div>
+                <div class="proyecto-info">>
+                    <h3 class="proyecto-titulo">Diseño para Redes Sociales</h3>
+                    <p class="proyecto-rol">Plaza de bolsillo Aurora Feminista</p>
+                    <p class="proyecto-descripcion">
+                        Diseño de logo, publicaciones y reels ... </p>
+                    <a href="https://www.behance.net/millarasilva" target="_blank" rel="noopener noreferrer" class="btn-proyecto">
+                        Ver proyecto
+                    </a>
+                </div>
+            </div>
+
+            <!-- Proyecto 2 -->
+            <div class="proyecto-item reverse">
+                <div class="proyecto-imagen-contenedor">
+                    <img src="img/proyecto2.jpg" alt="Salud CABA - Rediseño Web" class="proyecto-imagen">
+                </div>
+                <div class="proyecto-info">
+                    <h3 class="proyecto-titulo">Rediseño Web</h3>
+                    <p class="proyecto-rol">Festival Chilean Wey</p>
+                    <p class="proyecto-descripcion">
+                        Rediseño conceptual de una landing page y páginas secundarias, enfocado en mejorar la claridad, la navegación y el acceso a información y servicios esenciales para la ciudadanía. El proyecto optimiza la experiencia desde una mirada centrada en usabilidad y accesibilidad.
+                    </p>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="btn-proyecto">
+                        Ver proyecto
+                    </a>
+                </div>
+            </div>
+
+            <!-- Proyecto 3 -->
+             <div class="proyecto-item">
+                <div class="proyecto-imagen-contenedor">
+                    <img src="img/proyecto3.jpg" alt="Prueba Técnica Supra" class="proyecto-imagen">
+                </div>
+                <div class="proyecto-info">
+                    <h3 class="proyecto-titulo">Diseño editorial: Agenda Awna</h3>
+                    <p class="proyecto-rol">Proyecto de titulación</p>
+                    <p class="proyecto-descripcion">
+                        Diseño de Agenda especializada para personas con trastorno bipolar. El proyecto incluyó una agenda y un registro anímico, resultado de una investigación en torno a las necesidades de quienes serían sus potenciales usuario </p>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="btn-proyecto">
+                        Ver proyecto
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
     <!-- Sección Contacto -->
     <section id="contacto" class="section bg-light">
@@ -324,11 +385,9 @@ document.head.appendChild(style);
                         </div>
                     </div>
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/javiera-millaray/" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-linkedin"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-dribbble"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-behance"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.behance.net/millarasilva" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-behance"></i></a>
                     </div>
                 </div>
                 <form id="contactForm" class="contact-form">
