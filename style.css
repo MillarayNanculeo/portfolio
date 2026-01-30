@@ -23,7 +23,7 @@ html {
 }
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: "poppins", sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--white);
@@ -72,7 +72,7 @@ a {
     display: inline-block;
     padding: 8px 28px;
     border-radius: 50px;
-    font-weight: 600;
+    
     text-align: center;
     transition: var(--transition);
     cursor: pointer;
@@ -82,6 +82,8 @@ a {
 .btn-primary {
     background-color: #5a002b;
     color: var(--white);
+    border: 2px solid #5a002b;
+    font-weight: 600;
 }
 
 .btn-primary:hover {
@@ -93,6 +95,7 @@ a {
     background-color: transparent;
     color: #5a002b;
     border: 3px solid #5a002b;
+    font-weight: 700;
 }
 
 .btn-secondary:hover {
@@ -112,6 +115,7 @@ nav {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
+
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -121,11 +125,6 @@ nav {
     margin: 0 auto;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-color);
-}
 
 .nav-menu {
     display: flex;
@@ -133,6 +132,7 @@ nav {
     justify-content: center;
     flex: 1;
     margin: 0 auto;
+    color:#4a0020;
 }
 
 .nav-menu li {
@@ -140,7 +140,7 @@ nav {
 }
 
 .nav-menu a {
-    font-weight: 500;
+    font-weight: 600;
     position: relative;
 }
 
@@ -159,6 +159,9 @@ nav {
     transition: var(--transition);
 }
 
+
+
+
 .nav-menu a:hover::after {
     width: 100%;
 }
@@ -173,6 +176,8 @@ nav {
 }
 
 /* Hero Section */
+
+
 .hero {
     display: flex;
     align-items: center;
@@ -189,27 +194,17 @@ nav {
 
 .hero-title {
     margin-bottom: 1rem;
-    font-family: "Lato", sans-serif;
-  font-weight: 900;
-  font-style: normal;
+    font-family: "poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 5rem;
 }
 
 .highlight {
     color: #5a002b;
 }
 
-.hero-subtitle {
-    font-size: 1rem;
-    color: var(--primary-color) ;
-    margin-bottom: 1.5rem;
-    font-weight: 900;
-}
 
-.hero-description {
-    font-size: 1.1rem;
-    max-width: 600px;
-    margin-bottom: 2rem;
-}
 
 .hero-image {
     flex: 1;
@@ -240,7 +235,72 @@ nav {
 
 /* Sobre mí */
 
+.sobre-mi-simple {
+    padding: 80px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
 
+.sobre-mi-simple-content {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.sobre-mi-simple-titulo {
+    color: #1d151a;
+    font-size: 4.5rem;
+    font-weight: 900;
+    margin-bottom: 30px;
+    font-family: "poppins", sans-serif;
+
+}
+
+.sobre-mi-simple-texto {
+    color: #1d151a;
+    font-size: 2.1rem;
+    line-height: 1.5;
+    font-weight: 500;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sobre-mi-simple {
+        padding: 60px 20px;
+    }
+    
+    .sobre-mi-simple-titulo {
+        font-size: 2.5rem;
+    }
+    
+    .sobre-mi-simple-texto {
+        font-size: 1.1rem;
+        max-width: 100%;
+    }
+    
+    .sobre-mi-simple-btn {
+        padding: 14px 32px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sobre-mi-simple-titulo {
+        font-size: 2rem;
+    }
+    
+    .sobre-mi-simple-texto {
+        font-size: 1rem;
+    }
+    
+    .sobre-mi-simple-btn {
+        width: 100%;
+        padding: 12px 24px;
+    }
+}
 
 
 .about-content {
@@ -465,6 +525,7 @@ nav {
     box-shadow: var(--shadow);
     transition: var(--transition);
 }
+
 
 .project-card:hover {
     transform: translateY(-10px);
@@ -745,14 +806,15 @@ footer {
 /* Cada texto "portafolio" */
 .portfolio-text {
     flex-shrink: 0;
-    color: white; /* Color tipografía */
+    color: #ffffff; /* Color tipografía */
     font-size: 2rem;
     font-weight: 900;
-    font-family: 'Lato', sans-serif;
-    text-transform: lowercase;
+    font-family: "poppins", sans-serif;
+    text-transform:uppercase;
     letter-spacing: 1px;
     white-space: nowrap;
     transition: all 0.3s ease;
+    margin-top: 5px;
 }
 
 /* Efecto hover sutil */
@@ -941,9 +1003,7 @@ footer {
 }
 
 /* Asegurar que los botones en proyectos .reverse también se alineen a la derecha */
-.proyecto-item.reverse .proyecto-info .btn-proyecto {
-    /* El botón se alineará naturalmente a la derecha porque el contenedor tiene text-align: right */
-}
+
 
 /* ============================================
    RESPONSIVE PARA MÓVILES
@@ -1028,7 +1088,383 @@ footer {
     }
 }
 
+/* ============================================
+   ESTILOS PARA EL BOTÓN DE CURRÍCULUM
+   ============================================ */
 
+.btn-cv {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+    padding: 8px 28px;
+    background-color: #5a002b;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-family: "poppins", sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(90, 0, 43, 0.2);
+}
 
+.btn-cv:hover {
+ 
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
 
+.btn-cv i {
+    font-size: 1.1rem;
+}
 
+/* ============================================
+   ESTILOS PARA EL MODAL/POPUP
+   ============================================ */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.modal.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: modalSlideIn 0.4s ease;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    border-bottom: 1px solid #eee;
+    background-color: #f9f9f9;
+    border-radius: 20px 20px 0 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.modal-header h2 {
+    color: #1d151a;
+    margin: 0;
+    font-size: 2rem;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: #999693;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.close-modal:hover {
+    color: #5a002b;
+    background-color: #f0f0f0;
+    transform: rotate(90deg);
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+/* ============================================
+   ESTILOS PARA EL CONTENIDO DEL CURRÍCULUM
+   ============================================ */
+
+.cv-content {
+    font-family: 'Lato', sans-serif;
+    color: #333;
+}
+
+.cv-section {
+    margin-bottom: 35px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #eee;
+}
+
+.cv-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.cv-section h3 {
+    color: #5a002b;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cv-section h3 i {
+    font-size: 1.3rem;
+}
+
+.cv-info {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #5a002b;
+}
+
+.cv-info p {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.cv-info a {
+    color: #5a002b;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.cv-info a:hover {
+    color: #4a0020;
+    text-decoration: underline;
+}
+
+.cv-item {
+    margin-bottom: 25px;
+    padding-left: 15px;
+    border-left: 3px solid #999693;
+}
+
+.cv-item:last-child {
+    margin-bottom: 0;
+}
+
+.cv-item h4 {
+    color: #1d151a;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.cv-subtitle {
+    color: #999693;
+    font-style: italic;
+    margin-bottom: 10px !important;
+}
+
+.cv-item ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.cv-item li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.skill-category {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    border-top: 4px solid #5a002b;
+}
+
+.skill-category h4 {
+    color: #1d151a;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.skill-category p {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.cv-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.btn-contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background-color: #5a002b;
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.btn-contact:hover {
+    background-color: #4a0020;
+    transform: translateY(-2px);
+}
+
+.btn-close-cv {
+    padding: 12px 24px;
+    background-color: transparent;
+    color: #999693;
+    border: 2px solid #999693;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-close-cv:hover {
+    background-color: #999693;
+    color: white;
+    
+}
+
+/* ============================================
+   RESPONSIVE PARA EL MODAL
+   ============================================ */
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 20px auto;
+    }
+    
+    .modal-header {
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .modal-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .close-modal {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    
+    .modal-body {
+        padding: 20px;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cv-actions {
+        flex-direction: column;
+    }
+    
+    .btn-cv {
+        width: 100%;
+        justify-content: center;
+        
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        border-radius: 15px;
+    }
+    
+    .cv-section h3 {
+        font-size: 1.3rem;
+    }
+    
+    .cv-item h4 {
+        font-size: 1.1rem;
+    }
+}
+
+/* FRASE CSS */
+.frase-contacto {
+    background-color: #5a002b;
+    text-align: center;
+    height: 100Vh;
+    align-content: center;
+}
+
+.frase-contacto-content {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.frase-contacto-uno {
+    color: #ffffff;
+    font-size: 4.5rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    font-family: "poppins", sans-serif;
+    line-height: 1.5;
+    display: block;
+    margin-bottom: 1px;
+}
+
+.frase-contacto-dos {
+    font-family: "poppins", sans-serif;
+    color: #ffffff;
+    font-size: 2.1rem;
+    line-height: 0.1;
+    font-weight: 400;
+    margin-left: auto;
+    margin-right: auto;
+}
