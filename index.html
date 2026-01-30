@@ -11,10 +11,65 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 
+    <link rel="stylesheet" href="https://use.typekit.net/tfc0aqt.css">
+
 
 <script>
     // DOM Ready
     document.addEventListener('DOMContentLoaded', function() {
+
+
+
+// ============================================
+// FUNCIONALIDAD PARA EL MODAL DEL CURRÍCULUM
+// ============================================
+
+// Obtener elementos
+const openCVBtn = document.getElementById('openCVBtn');
+const cvModal = document.getElementById('cvModal');
+const closeModalBtn = document.querySelector('.close-modal');
+const closeCvBtn = document.querySelector('.btn-close-cv');
+
+// Abrir modal
+if (openCVBtn) {
+    openCVBtn.addEventListener('click', function() {
+        cvModal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevenir scroll del body
+    });
+}
+
+// Cerrar modal (múltiples formas)
+function closeModal() {
+    cvModal.classList.remove('active');
+    document.body.style.overflow = 'auto'; // Restaurar scroll
+}
+
+// Cerrar con el botón X
+if (closeModalBtn) {
+    closeModalBtn.addEventListener('click', closeModal);
+}
+
+// Cerrar con el botón "Cerrar"
+if (closeCvBtn) {
+    closeCvBtn.addEventListener('click', closeModal);
+}
+
+// Cerrar al hacer clic fuera del modal
+cvModal.addEventListener('click', function(e) {
+    if (e.target === cvModal) {
+        closeModal();
+    }
+});
+
+// Cerrar con la tecla Escape
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && cvModal.classList.contains('active')) {
+        closeModal();
+    }
+});
+
+
+
         // Actualizar año en el footer
         document.getElementById('currentYear').textContent = new Date().getFullYear();
         
@@ -192,6 +247,10 @@
         .stat-item:nth-child(4) { transition-delay: 0.3s; }
     `;
     document.head.appendChild(style);
+
+
+
+
 </script>
 </head>
 
@@ -201,15 +260,14 @@
     <!-- Navegación -->
     <nav id="navbar">
         <div class="nav-container">
-            <!--<a href="#" class="logo">MiPortafolio</a> AQUÍ PONER UN LOGO CUANDO LO TENGA--> 
             <button class="menu-toggle" id="menuToggle">
                 <i class="fas fa-bars"></i>
             </button>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#sobre-mi">Ayudantías</a></li>
-                <li><a href="#contacto" >        Contacto</a></li>
+                <li><a href="#inicio">INICIO</a></li>
+                <li><a href="#proyectos">PROYECTOS</a></li>
+                <li><a href="#sobre-mi">AYUDANTÍAS</a></li>
+                <li><a href="#contacto" > CONTACTO</a></li>
             </ul>
         </div>
     </nav>
@@ -219,11 +277,9 @@
         <div class="hero-content">
             <h1 class="hero-title">
             Hola, soy <br><span class="highlight">Javiera Millaray!</span></h1>
-            <p class="hero-subtitle">DISEÑADORA GRÁFICA </p>
-            <p class="hero-description">Diseñadora desde hace un año con experiencia en proyectos que promueven el bienestar con las necesidades del usuario como el centro.
-                 </br> Me interesa seguir desarrollándome en proyectos relacionados con el diseño, la cultura y el impacto social, explorando nuevas formas de comunicar y crear experiencias significativas para los usuarios. </p>
-            <a href="https://www.behance.net/millarasilva" target="_blank" rel="noopener noreferrer" class="btn-primary">Ver mis proyectos</a>
-            <a href="mailto:javiera2000silva@gmail.com?subject=Consulta%20portafolio&body=Hola%20Javiera,%0D%0A%0D%0AVi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20contigo%20sobre%20tu%20trabajo.%0D%0A%0D%0ASaludos," target="_blank" rel="noopener noreferrer" class="btn-secondary">Contactar</a>
+                       
+            <a href="https://www.behance.net/millarasilva" target="_blank" rel="noopener noreferrer" class="btn-primary">MIS PROYECTOS</a>
+            <a href="#contacto" class="btn-secondary">CONTÁCTAME!</a>
         </div>
 <div class="hero-image">
     <img src="img/ICOLOR.png" alt="Javiera Millaray - Diseñadora Gráfica" class="profile-photo">
@@ -258,6 +314,26 @@
     </div>
 </div>
 
+
+
+<section id="sobre-mi-simple" class="sobre-mi-simple">
+    <div class="container">
+        <div class="sobre-mi-simple-content">
+            <h1 class="sobre-mi-simple-titulo">SOBRE MÍ</h1>
+            <p class="sobre-mi-simple-texto">
+                MI ENFOQUE ES INTEGRAL Y ESTRATÉGICO:<br>
+                CONECTO LAS NECESIDADES DEL USUARIO CON LOS OBJETIVOS DE CADA PROYECTO BUSCANDO SIEMPRE SOLUCIONES CLARAS, COHERENTES Y FUNCIONALES.
+            </p>
+    <button id="openCVBtn" class="btn-cv">
+        <i class="fas fa-file-alt"></i> VER CURRÍCULUM
+    </button>
+        </div>
+    </div>
+</section>
+</section>
+
+
+
    <!-- Sección Sobre Mí -->
 <section id="sobre-mi" class="section">
     <div class="container">
@@ -274,27 +350,31 @@
             </div>
             
             
-            <!-- Columna derecha: Habilidades -->
-           
-            <div class="skills-column">
-                <h3 class="skills-title">Habilidades</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Adobe Creative Suite</span>
-                    <span class="skill-tag">Design Thinking</span>
-                    <span class="skill-tag">HTML/CSS</span>
-                    <span class="skill-tag">Ilustración</span>
-                    <span class="skill-tag">Docencia</span>
-                    <span class="skill-tag">Prototipado</span>
-                    <span class="skill-tag">Investigación de usuarios</span>
-                    <span class="skill-tag">Redes Sociales</span>
-                    <span class="skill-tag">UX/UI Design</span>
-                    <span class="skill-tag">Comunicación</span>
-                    <span class="skill-tag">Diseño Gráfico</span>
-                    <span class="skill-tag">Comunicación Visual</span>
-                </div>
-            </div>
-
+<!-- En la columna de Habilidades, después de los skill-tags -->
+<div class="skills-column">
+    <h3 class="skills-title">Habilidades</h3>
+    <div class="skill-tags">
+        <span class="skill-tag">Adobe Creative Suite</span>
+        <span class="skill-tag">Design Thinking</span>
+        <span class="skill-tag">HTML/CSS</span>
+        <span class="skill-tag">Ilustración</span>
+        <span class="skill-tag">Docencia</span>
+        <span class="skill-tag">Prototipado</span>
+        <span class="skill-tag">Investigación de usuarios</span>
+        <span class="skill-tag">Redes Sociales</span>
+        <span class="skill-tag">UX/UI Design</span>
+        <span class="skill-tag">Comunicación</span>
+        <span class="skill-tag">Diseño Gráfico</span>
+        <span class="skill-tag">Comunicación Visual</span>
     </div>
+    
+    <button id="openCVBtn" class="btn-cv">
+        <i class="fas fa-file-alt"></i> Ver Currículum
+    </button>
+</div>
+
+
+    
 </section>
 
 
@@ -309,9 +389,9 @@
 <!-- Proyecto 1 - Imagen IZQUIERDA / Texto DERECHA -->
             <div class="proyecto-item">
                 <div class="proyecto-imagen-contenedor">
-                    <img src="img/proyecto1.jpg" alt="Click Battle - Rediseño UX/UI" class="proyecto-imagen">
+                    <img src="img/rrssaurorafeminista.png" alt="Click Battle - Rediseño UX/UI" class="proyecto-imagen">
                 </div>
-                <div class="proyecto-info">>
+                <div class="proyecto-info">
                     <h3 class="proyecto-titulo">Diseño para Redes Sociales</h3>
                     <p class="proyecto-rol">Plaza de bolsillo Aurora Feminista</p>
                     <p class="proyecto-descripcion">
@@ -325,7 +405,7 @@
             <!-- Proyecto 2 -->
             <div class="proyecto-item reverse">
                 <div class="proyecto-imagen-contenedor">
-                    <img src="img/proyecto2.jpg" alt="Salud CABA - Rediseño Web" class="proyecto-imagen">
+                    <img src="img/CHILEAN WEY PORTAFOLIO_behance.png" alt="Salud CABA - Rediseño Web" class="proyecto-imagen">
                 </div>
                 <div class="proyecto-info">
                     <h3 class="proyecto-titulo">Rediseño Web</h3>
@@ -333,7 +413,7 @@
                     <p class="proyecto-descripcion">
                         Rediseño conceptual de una landing page y páginas secundarias, enfocado en mejorar la claridad, la navegación y el acceso a información y servicios esenciales para la ciudadanía. El proyecto optimiza la experiencia desde una mirada centrada en usabilidad y accesibilidad.
                     </p>
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="btn-proyecto">
+                    <a href="https://www.behance.net/gallery/178112853/Festival-Web-Design" target="_blank" rel="noopener noreferrer" class="btn-proyecto">
                         Ver proyecto
                     </a>
                 </div>
@@ -342,7 +422,7 @@
             <!-- Proyecto 3 -->
              <div class="proyecto-item">
                 <div class="proyecto-imagen-contenedor">
-                    <img src="img/proyecto3.jpg" alt="Prueba Técnica Supra" class="proyecto-imagen">
+                    <img src="img/awna.jpg" alt="Prueba Técnica Supra" class="proyecto-imagen">
                 </div>
                 <div class="proyecto-info">
                     <h3 class="proyecto-titulo">Diseño editorial: Agenda Awna</h3>
@@ -359,10 +439,34 @@
     </div>
 </section>
 
+
+<section id="frase" class="frase-contacto">
+    <div class="container">
+        <div class="frase-contacto-content">
+
+            <p class="frase-contacto-uno">
+                UN GRAN DISEÑO
+                 </p>
+
+            <p class="frase-contacto-dos">
+                comienza con una
+                 </p>
+
+            <p class="frase-contacto-uno">
+                GRAN COLABORACIÓN
+                 </p>
+
+        </div>
+    </div>
+</section>
+</section>
+
+
+
     <!-- Sección Contacto -->
     <section id="contacto" class="section bg-light">
         <div class="container">
-            <h2 class="section-title">Contacto</h2>
+            <h2 class="section-title">CONTACTO</h2>
             <div class="contact-content">
                 <div class="contact-info">
                     <h3>¡Hablemos!</h3>
@@ -386,20 +490,7 @@
                 </div>
 
 
-<!--<form class="contact-form" action="https://formspree.io/f/xwvljewa" method="POST">
-    <input type="hidden" name="_subject" value="Nuevo mensaje del portafolio">
-  
-    <div class="form-group">
-        <input type="text" name="name" placeholder="Tu nombre" required>
-    </div>
-    <div class="form-group">
-        <input type="email" name="email" placeholder="Tu correo electrónico" required>
-    </div>
-    <div class="form-group">
-        <textarea name="message" rows="5" placeholder="Tu mensaje" required></textarea>
-    </div>
-    <button type="submit" class="btn-primary">Enviar mensaje</button>
-</form>-->
+
 
 <form id="contactForm" class="contact-form">
     <div class="form-group">
@@ -430,6 +521,120 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+
+
+
+    
+
+<!-- Modal/Popup del Currículum -->
+<div id="cvModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Mi Currículum</h2>
+            <button class="close-modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <!-- Contenido de tu currículum aquí -->
+            <div class="cv-content">
+                
+                <!-- Sección: Información Personal -->
+                <div class="cv-section">
+                    <h3><i class="fas fa-user"></i> Información Personal</h3>
+                    <div class="cv-info">
+                        <p><strong>Nombre:</strong> Javiera Millaray Silva Ñanculeo</p>
+                        <p><strong>Email:</strong> javiera2000silva@gmail.com</p>
+                        <p><strong>Ubicación:</strong> Santiago, Chile</p>
+                        <p><strong>Portafolio:</strong> <a href="https://www.behance.net/millarasilva" target="_blank">behance.net/millarasilva</a></p>
+                        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/javiera-millaray/" target="_blank">linkedin.com/in/javiera-millaray</a></p>
+                    </div>
+                </div>
+                
+                <!-- Sección: Educación -->
+                <div class="cv-section">
+                    <h3><i class="fas fa-graduation-cap"></i> Educación</h3>
+                    <div class="cv-item">
+                        <h4>Diseño mención visualidad y medios</h4>
+                        <p class="cv-subtitle">Universidad de Chile • 2018 - 2024</p>
+                        <p>Especialización en Visualidad y Medios</p>
+                    </div>
+                </div>
+                
+                <!-- Sección: Experiencia -->
+                <div class="cv-section">
+                    <h3><i class="fas fa-briefcase"></i> Experiencia Profesional</h3>
+                    
+                    <div class="cv-item">
+                        <h4>Diseñadora Gráfica & UX/UI</h4>
+                        <p class="cv-subtitle">Freelance • 2023 - Presente</p>
+                        <ul>
+                            <li>Diseño de interfaces y contenidos digitales para organizaciones sociales</li>
+                            <li>Desarrollo de campañas con propósito social</li>
+                            <li>Colaboración con fundaciones y medios locales</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="cv-item">
+                        <h4>Ayudantías en Diseño</h4>
+                        <p class="cv-subtitle">Universidad de Chile • 2022 - 2023</p>
+                        <ul>
+                            <li>Docencia en talleres de diseño</li>
+                            <li>Apoyo en metodologías de diseño centrado en el usuario</li>
+                            <li>Mentoría a estudiantes de primeros años</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Sección: Habilidades Técnicas -->
+                <div class="cv-section">
+                    <h3><i class="fas fa-tools"></i> Habilidades Técnicas</h3>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4>Diseño</h4>
+                            <p>Adobe Creative Suite</p>
+                            <p>Photoshop • Illustrator • Indesign</p>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Desarrollo</h4>
+                            <p>HTML5 • CSS3 • JavaScript básico</p>
+                            <p>Responsive Design • Accesibilidad Web</p>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Metodologías</h4>
+                            <p>Design Thinking • User Research</p>
+                            <p>UX/UI Design • Comunicación Visual</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sección: Proyectos Destacados -->
+                <div class="cv-section">
+                    <h3><i class="fas fa-star"></i> Proyectos Destacados</h3>
+                    <div class="cv-item">
+                        <h4>Agenda Awna</h4>
+                        <p class="cv-subtitle">Proyecto de Titulación • 2024</p>
+                        <p>Diseño de agenda especializada para personas con trastorno bipolar, incluyendo investigación de usuarios y diseño centrado en necesidades específicas.</p>
+                    </div>
+                    
+                    <div class="cv-item">
+                        <h4>Rediseño Festival Chilean Wey</h4>
+                        <p class="cv-subtitle">Proyecto de Rediseño Web • 2023</p>
+                        <p>Rediseño conceptual de landing page y páginas secundarias, enfocado en usabilidad y accesibilidad.</p>
+                    </div>
+                </div>
+                
+                <!-- Botón para descargar (opcional) -->
+                <div class="cv-actions">
+                    <a href="mailto:javiera2000silva@gmail.com" target="_blank" rel="noopener noreferrer" class="btn-contact">
+                        <i class="fas fa-envelope"></i> Contactar
+                    </a>
+                    <button class="btn-close-cv">Cerrar</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
 </body>
 </html>
