@@ -72,11 +72,11 @@ a {
     display: inline-block;
     padding: 8px 28px;
     border-radius: 50px;
-    
     text-align: center;
     transition: var(--transition);
     cursor: pointer;
     margin: 5px;
+    font-family: "Poppins", sans-serif   ;
 }
 
 .btn-primary {
@@ -112,7 +112,6 @@ nav {
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -158,9 +157,6 @@ nav {
     background-color: var(--primary-color);
     transition: var(--transition);
 }
-
-
-
 
 .nav-menu a:hover::after {
     width: 100%;
@@ -239,6 +235,8 @@ nav {
     padding: 80px 20px;
     background-color: #ffffff;
     text-align: center;
+    height: 100vh;
+    align-content: center;
 }
 
 .sobre-mi-simple-content {
@@ -329,12 +327,6 @@ nav {
     min-width: 0; /* Para que el texto no desborde */
 }
 
-.about-stats {
-    flex: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
 
 
 .skills-column {
@@ -344,19 +336,14 @@ nav {
     max-width: 500px; /* Ancho máximo para la columna de habilidades */
 }
 
-.skills-title {
-    color:var(--text-color);
-    font-size: 2.5rem;
-    margin-bottom: 25px;
-    text-align: left;
-    font-weight: 900;
-    margin-bottom: 50px;
-}
+
 
 .skill-tags {
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .skill-tag {
@@ -533,7 +520,7 @@ nav {
 }
 
 .project-image {
-    height: 200px;
+    height: 500px;
     background-color: var(--secondary-color);
     display: flex;
     align-items: center;
@@ -569,29 +556,13 @@ nav {
     margin: 0 auto;
 }
 
-.contact-info {
-    flex: 1;
-}
-
-.contact-details {
-    margin: 30px 0;
-}
-
-.contact-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.contact-item i {
-    width: 30px;
-    color: var(--primary-color);
-}
 
 .social-links {
     display: flex;
     gap: 15px;
     margin-top: 20px;
+    justify-content:center;
+    margin-bottom: 30px;
 }
 
 .social-link {
@@ -611,31 +582,8 @@ nav {
     color: var(--white);
 }
 
-.contact-form {
-    flex: 1;
-}
 
-.form-group {
-    margin-bottom: 20px;
-}
 
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 12px 16px;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-    transition: var(--transition);
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
-}
 
 /* Footer */
 footer {
@@ -882,211 +830,6 @@ footer {
 }
 
 
-
-/* ============================================
-   SECCIÓN PROYECTOS - EFECTO ZIG-ZAG
-   ============================================ */
-
-.section-proyectos {
-    padding: 100px 20px;
-    background-color: #ffffff;
-}
-
-.section-proyectos .container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.section-proyectos .section-title {
-    text-align: left;
-    font-size: 2.5rem;
-    margin-bottom: 70px;
-    color: #1d151a;
-}
-
-/* Contenedor de proyectos */
-.proyectos-lista {
-    display: flex;
-    flex-direction: column;
-    gap: 120px; /* Más espacio entre proyectos en zig-zag */
-}
-
-/* Estilo BASE para cada proyecto */
-.proyecto-item {
-    display: flex;
-    align-items: center;
-    gap: 80px;
-    width: 100%;
-}
-
-/* Por defecto: Imagen IZQUIERDA, Texto DERECHA */
-.proyecto-item .proyecto-imagen-contenedor {
-    flex: 1;
-    order: 1; /* Imagen primero (izquierda) */
-}
-
-.proyecto-item .proyecto-info {
-    flex: 1;
-    order: 2; /* Info después (derecha) */
-}
-
-/* Proyectos ALTERNOS (con clase .reverse): Imagen DERECHA, Texto IZQUIERDA */
-.proyecto-item.reverse {
-    flex-direction: row; /* Mantiene dirección horizontal */
-}
-
-.proyecto-item.reverse .proyecto-imagen-contenedor {
-    order: 2; /* Imagen al final (derecha) */
-}
-
-.proyecto-item.reverse .proyecto-info {
-    order: 1; /* Info al inicio (izquierda) */
-    text-align: right; /* Texto alineado a la derecha */
-}
-
-/* Estilos de imagen y contenido (comunes) */
-.proyecto-imagen {
-    width: 100%;
-    height: 450px; /* Altura consistente */
-    object-fit: cover;
-    border-radius: 16px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-    transition: all 0.4s ease;
-}
-
-.proyecto-imagen:hover {
-    transform: scale(1.02);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-}
-
-.proyecto-titulo {
-    font-size: 2.2rem;
-    font-weight: 800;
-    margin-bottom: 15px;
-    color: #1d151a;
-}
-
-.proyecto-rol {
-    font-size: 1.2rem;
-    color: #999693;
-    margin-bottom: 25px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.proyecto-descripcion {
-    font-size: 1.15rem;
-    line-height: 1.8;
-    color: #555;
-    margin-bottom: 40px;
-}
-
-/* Botón "Ver proyecto" */
-.btn-proyecto {
-    display: inline-block;
-    padding: 16px 36px;
-    background-color: transparent;
-    color: #1d151a;
-    border: 2px solid #1d151a;
-    border-radius: 50px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-size: 1rem;
-}
-
-.btn-proyecto:hover {
-    background-color: #1d151a;
-    color: #ffffff;
-    transform: translateY(-3px);
-}
-
-/* Asegurar que los botones en proyectos .reverse también se alineen a la derecha */
-
-
-/* ============================================
-   RESPONSIVE PARA MÓVILES
-   ============================================ */
-
-@media (max-width: 1100px) {
-    .proyecto-item {
-        gap: 50px;
-    }
-    
-    .proyecto-imagen {
-        height: 400px;
-    }
-}
-
-@media (max-width: 992px) {
-    .proyecto-item,
-    .proyecto-item.reverse {
-        flex-direction: column;
-        gap: 40px;
-    }
-    
-    .proyecto-item .proyecto-imagen-contenedor,
-    .proyecto-item.reverse .proyecto-imagen-contenedor {
-        order: 1; /* Imagen siempre arriba en móvil */
-        width: 100%;
-    }
-    
-    .proyecto-item .proyecto-info,
-    .proyecto-item.reverse .proyecto-info {
-        order: 2; /* Info siempre abajo en móvil */
-        text-align: center; /* Texto centrado en móvil */
-        width: 100%;
-    }
-    
-    .proyectos-lista {
-        gap: 80px;
-    }
-}
-
-@media (max-width: 768px) {
-    .section-proyectos {
-        padding: 80px 20px;
-    }
-    
-    .section-proyectos .section-title {
-        font-size: 2rem;
-        margin-bottom: 50px;
-        text-align: center;
-    }
-    
-    .proyecto-titulo {
-        font-size: 1.8rem;
-    }
-    
-    .proyecto-imagen {
-        height: 300px;
-        border-radius: 12px;
-    }
-    
-    .proyecto-descripcion {
-        font-size: 1.05rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .proyecto-imagen {
-        height: 250px;
-    }
-    
-    .proyecto-titulo {
-        font-size: 1.6rem;
-    }
-    
-    .btn-proyecto {
-        padding: 14px 30px;
-        font-size: 0.95rem;
-    }
-    
-    .proyectos-lista {
-        gap: 60px;
-    }
-}
 
 /* ============================================
    ESTILOS PARA EL BOTÓN DE CURRÍCULUM
@@ -1468,3 +1211,449 @@ footer {
     margin-left: auto;
     margin-right: auto;
 }
+
+/* ============================================
+   FORMULARIO DE CONTACTO SIMPLE Y CENTRADO
+   ============================================ */
+
+.contact-title {
+    color: #1d151a;
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 100px;
+    font-family: "poppins", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+
+}
+
+.contact-form-simple {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group-simple {
+
+    width: 100%;
+}
+
+.form-group-simple input,
+.form-group-simple textarea {
+    width: 100%;
+    padding: 12px 0; 
+    border: none;
+    border-bottom: 2px solid #999693;
+    background-color: transparent;
+    font-family: "poppins", sans-serif;
+    font-size: 1.1rem;
+    color: #1d151a;
+    transition: all 0.3s ease;
+    border-radius: 0;
+    outline: none;
+}
+
+.form-group-simple textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-group-simple input::placeholder,
+.form-group-simple textarea::placeholder {
+    color: #999693;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px; /* MÁS ESPACIADO */
+    font-size: 1rem; /* MÁS GRANDE COMO LA IMAGEN */
+}
+
+.form-group-simple input:focus,
+.form-group-simple textarea:focus {
+        outline: none;
+    border-bottom-color: #5a002b;
+    background-color: transparent;
+    padding-left: 10px; /* PEQUEÑO EFECTO AL FOCUS */
+}
+
+.btn-primary-simple {
+    width: auto; /* ANCHO AUTOMÁTICO */
+    min-width: 200px; /* ANCHO MÍNIMO */
+    padding: 12px 40px; /* MÁS PADDING HORIZONTAL */
+    margin: 40px auto 0; /* CENTRADO Y MÁRGENES */
+    border: 2px solid #5a002b;
+    border-radius: 50px;
+    font-family: "poppins", sans-serif;
+    background-color: #5a002b;
+    color: var(--white);
+    font-weight: 600;
+}
+
+.btn-primary-simple:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* AJUSTES PARA EL CONTENEDOR DEL FORMULARIO */
+#contacto .contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* SI QUIERES MÁS ESPACIO ENTRE LOS CAMPOS */
+.form-group-simple + .form-group-simple {
+    margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-form-simple {
+        max-width: 90%;
+        padding: 10px;
+    }
+    
+    .form-group-simple input,
+    .form-group-simple textarea,
+    .form-group-simple input::placeholder,
+    .form-group-simple textarea::placeholder {
+        font-size: 1.1rem;
+    }
+    
+    .btn-primary-simple {
+        min-width: 180px;
+        padding: 10px 30px;
+        font-size: 1rem;
+    }
+    
+    .form-group-simple + .form-group-simple {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form-simple {
+        max-width: 100%;
+    }
+    
+    .form-group-simple input,
+    .form-group-simple textarea,
+    .form-group-simple input::placeholder,
+    .form-group-simple textarea::placeholder {
+        font-size: 1rem;
+    }
+    
+    .btn-primary-simple {
+        width: 100%; /* EN MÓVIL OCUPA TODO EL ANCHO */
+        max-width: 300px;
+        min-width: unset;
+    }
+}
+
+
+/* ============================================
+   SECCIÓN PROYECTOS DESTACADOS - TARJETAS VERTICALES
+   ============================================ */
+
+.section-proyectos-destacados {
+    padding: 100px 20px;
+    background-color: #ffffff;
+}
+
+.section-proyectos-destacados .container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-proyectos-destacados .section-title {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 900;
+    margin-bottom: 70px;
+    color: #1d151a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: "poppins", sans-serif;
+}
+
+/* Grid de tarjetas */
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+/* Tarjeta individual */
+.proyecto-tarjeta {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid #f0f0f0;
+}
+
+.proyecto-tarjeta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Categoría */
+.proyecto-categoria {
+    padding: 12px 25px;
+    background-color: #5a002b;
+    color: white;
+    font-family: "poppins", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+/* Contenedor de imagen - VERSIÓN VERTICAL */
+.proyecto-imagen-contenedor {
+    height: 450px; 
+    overflow: hidden;
+    position: relative;
+}
+
+/* Opción con ratio fijo 2:3 (muy vertical) */
+.proyecto-imagen-contenedor.ratio-2-3 {
+    height: 0;
+    padding-bottom: 150%; /* Ratio 2:3 = 3/2 = 1.5 = 150% */
+    position: relative;
+}
+
+.proyecto-imagen-contenedor.ratio-4-5 {
+    height: 0;
+    padding-bottom: 125%; /* Ratio 4:5 = 5/4 = 1.25 = 125% */
+    position: relative;
+}
+
+.proyecto-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top; /* Recorta desde la parte superior */
+    transition: transform 0.5s ease;
+}
+
+/* Para imágenes en contenedores con ratio */
+.proyecto-imagen-contenedor.ratio-2-3 .proyecto-imagen,
+.proyecto-imagen-contenedor.ratio-4-5 .proyecto-imagen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Recorte más agresivo si es necesario */
+.proyecto-imagen.recortada {
+    object-fit: cover;
+    object-position: center 25%; /* Ajusta este valor: 0% = parte superior, 100% = parte inferior */
+}
+
+.proyecto-tarjeta:hover .proyecto-imagen {
+    transform: scale(1.05);
+}
+
+/* Información de la tarjeta */
+.proyecto-info {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.proyecto-titulo {
+    font-size: 1.1zrem;
+    font-weight: 800;
+    color: #1d151a;
+    margin-bottom: 8px;
+    font-family: "poppins", sans-serif;
+    line-height: 1.3;
+}
+
+.proyecto-descripcion {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 5px;
+    flex-grow: 1;
+    font-family: 'Lato', sans-serif;
+}
+
+
+
+/* Botón "Ver más proyectos" */
+.ver-mas-contenedor {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.btn-ver-mas {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 40px;
+    background-color: #1d151a;
+    color: white;
+    border-radius: 50px;
+    font-family: "poppins", sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    letter-spacing: 0.1px;
+}
+
+.btn-ver-mas:hover {
+    background-color: #5a002b;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(29, 21, 26, 0.2);
+}
+
+.btn-ver-mas i {
+    transition: transform 0.3s ease;
+}
+
+.btn-ver-mas:hover i {
+    transform: translateX(5px);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 1200px) {
+    .proyectos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
+    }
+}
+
+@media (max-width: 992px) {
+    .section-proyectos-destacados {
+        padding: 80px 20px;
+    }
+    
+    .section-proyectos-destacados .section-title {
+        font-size: 2.4rem;
+        margin-bottom: 60px;
+    }
+    
+    .proyectos-grid {
+        gap: 30px;
+    }
+    
+    .proyecto-imagen-contenedor {
+        height: 300px;
+    }
+    
+    .proyecto-info {
+        padding: 25px;
+    }
+    
+    .proyecto-titulo {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .proyectos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    .section-proyectos-destacados .section-title {
+        font-size: 2rem;
+        margin-bottom: 50px;
+    }
+    
+    .proyecto-imagen-contenedor {
+        height: 280px;
+    }
+    
+    .proyecto-titulo {
+        font-size: 1.5rem;
+    }
+    
+    .proyecto-descripcion {
+        font-size: 0.95rem;
+    }
+    
+    .btn-proyecto {
+        padding: 10px 24px;
+        font-size: 0.9rem;
+    }
+    
+    .btn-ver-mas {
+        padding: 13px 35px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .proyectos-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .proyecto-imagen-contenedor {
+        height: 320px;
+    }
+    
+    .proyecto-categoria {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-proyectos-destacados {
+        padding: 70px 15px;
+    }
+    
+    .section-proyectos-destacados .section-title {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+    }
+    
+    .proyecto-info {
+        padding: 20px;
+    }
+    
+    .proyecto-titulo {
+        font-size: 1.4rem;
+    }
+    
+    .btn-proyecto {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .btn-ver-mas {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+}
+
+
