@@ -1,4 +1,4 @@
-      /* Reset y estilos base */
+/* Reset y estilos base */
 * {
     margin: 0;
     padding: 0;
@@ -37,8 +37,6 @@ body {
     padding: 0 20px;
 }
 
-
-
 /* Tipografía */
 h1, h2, h3 {
     font-weight: 900;
@@ -76,7 +74,7 @@ a {
     transition: var(--transition);
     cursor: pointer;
     margin: 5px;
-    font-family: "Poppins", sans-serif   ;
+    font-family: "Poppins", sans-serif;
 }
 
 .btn-primary {
@@ -114,7 +112,6 @@ nav {
     z-index: 1000;
 }
 
-
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -124,14 +121,13 @@ nav {
     margin: 0 auto;
 }
 
-
 .nav-menu {
     display: flex;
     list-style: none;
     justify-content: center;
     flex: 1;
     margin: 0 auto;
-    color:#4a0020;
+    color: #4a0020;
 }
 
 .nav-menu li {
@@ -172,8 +168,6 @@ nav {
 }
 
 /* Hero Section */
-
-
 .hero {
     display: flex;
     align-items: center;
@@ -200,8 +194,6 @@ nav {
     color: #5a002b;
 }
 
-
-
 .hero-image {
     flex: 1;
     display: flex;
@@ -217,7 +209,6 @@ nav {
 /* Secciones */
 .section {
     padding: 80px 80px;
-    
 }
 
 .section-title {
@@ -230,7 +221,6 @@ nav {
 }
 
 /* Sobre mí */
-
 .sobre-mi-simple {
     padding: 80px 20px;
     background-color: #ffffff;
@@ -250,7 +240,6 @@ nav {
     font-weight: 900;
     margin-bottom: 30px;
     font-family: "poppins", sans-serif;
-
 }
 
 .sobre-mi-simple-texto {
@@ -262,228 +251,13 @@ nav {
     margin-right: auto;
 }
 
-
-
-/* Responsive */
-@media (max-width: 768px) {
-    .sobre-mi-simple {
-        padding: 60px 20px;
-    }
-    
-    .sobre-mi-simple-titulo {
-        font-size: 2.5rem;
-    }
-    
-    .sobre-mi-simple-texto {
-        font-size: 1.1rem;
-        max-width: 100%;
-    }
-    
-    .sobre-mi-simple-btn {
-        padding: 14px 32px;
-        font-size: 1.1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .sobre-mi-simple-titulo {
-        font-size: 2rem;
-    }
-    
-    .sobre-mi-simple-texto {
-        font-size: 1rem;
-    }
-    
-    .sobre-mi-simple-btn {
-        width: 100%;
-        padding: 12px 24px;
-    }
-}
-
-
-.about-content {
-    display: flex;
-    gap: 50px;
-    flex-direction: row; /* Imagen y texto en fila */
-    align-items: flex-start; /* Alinea al inicio */
-    gap: 60px; /* Espacio entre texto e imagen */
-    margin-top: 40px;
-
-}
-
-  
-.h2white {
-     color:var(--text-color);
-     
-}
-
-.about-text {
-    flex: 1;
-    font-size: 1.1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-        line-height: 1.8;
-
-    min-width: 0; /* Para que el texto no desborde */
-}
-
-
-
-.skills-column {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    max-width: 500px; /* Ancho máximo para la columna de habilidades */
-}
-
-
-
 .skill-tags {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding-top: 40px;
     padding-bottom: 40px;
-}
-
-.skill-tag {
-    background-color: rgba(153, 150, 147, 0.2); /* Usando el color primario con transparencia */
-    padding: 10px 18px;
-    border-radius: 25px;
-    font-size: 1rem;
-    color: #ffffff;
-    border: 1px solid rgba(153, 150, 147, 0.4);
-    transition: all 0.3s ease;
-    font-weight: 500;
-}
-
-.skill-tag:hover {
-    background-color: rgba(153, 150, 147, 0.4);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Responsive para móviles */
-@media (max-width: 992px) {
-    .about-content {
-        flex-direction: column;
-        gap: 40px;
-    }
-    
-    .skills-column {
-        width: 100%;
-        max-width: 100%;
-        order: 1; /* Habilidades primero en móvil */
-    }
-    
-    .about-text {
-        order: 2; /* Sobre mí después en móvil */
-        max-width: 100%;
-    }
-}
-
-/* Ajustes para pantallas más pequeñas */
-@media (max-width: 768px) {
-    .section {
-        padding: 60px 20px;
-    }
-    
-    .skills-column {
-        padding: 20px;
-    }
-    
-    .skill-tag {
-        padding: 8px 16px;
-        font-size: 0.95rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .skill-tags {
-        gap: 8px;
-    }
-    
-    .skill-tag {
-        padding: 6px 14px;
-        font-size: 0.9rem;
-    }
-    
-    .skills-title {
-        font-size: 1.5rem;
-        margin-bottom: 20px;
-    }
-}
-
-/* Decoración opcional */
-.image-decoration {
-    position: absolute;
-    top: -15px;
-    left: -15px;
-    right: -15px;
-    bottom: -15px;
-    border-radius: 30px;
-    background: linear-gradient(135deg, var(--primary-color), transparent);
-    z-index: -1;
-    opacity: 0.1;
-}
-
-/* Habilidades - debajo del texto */
-.skills {
-    margin-top: 40px;
-}
-
-/* Para móviles: cambiar a columna */
-@media (max-width: 992px) {
-    .about-content {
-        flex-direction: column; /* Cambia a columna en móviles */
-        gap: 40px;
-        justify-content: space-between;
-    }
-    
-    .about-image {
-        width: 100%;
-        max-width: 400px;
-        margin: 0 auto;
-        order: -1; /* Opcional: poner imagen arriba en móviles */
-    }
-    
-    .about-text {
-        max-width: 700px; /* Limita el ancho del texto */
-        line-height: 1.8; /* Mejor interlineado */
-        font-size: 1.1rem; /* Tamaño de fuente ligeramente mayor */
-    }
-}
-
-.stat-item {
-    text-align: center;
-    padding: 20px;
-    background-color: var(--white);
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-}
-
-.stat-number {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--primary-color);
-}
-
-.stat-label {
-    color: var(--text-light);
-    font-size: 0.9rem;
-}
-
-.skills {
-    margin-top: 30px;
-     font-weight: 700;
-     align-items: center;
-}
-
-.skill-tags {
-    display: flex;
-    flex-wrap: wrap;
     gap: 10px;
-    margin-top: 15px;
 }
 
 .skill-tag {
@@ -492,11 +266,16 @@ nav {
     border-radius: 20px;
     font-size: 0.9rem;
     color: var(--text-color);
+    border: 1px solid rgba(153, 150, 147, 0.4);
+    transition: var(--transition);
+    font-weight: 500;
 }
 
-
-
-
+.skill-tag:hover {
+    background-color: rgba(153, 150, 147, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
 
 /* Proyectos */
 .projects-grid {
@@ -512,7 +291,6 @@ nav {
     box-shadow: var(--shadow);
     transition: var(--transition);
 }
-
 
 .project-card:hover {
     transform: translateY(-10px);
@@ -556,12 +334,11 @@ nav {
     margin: 0 auto;
 }
 
-
 .social-links {
     display: flex;
     gap: 15px;
     margin-top: 20px;
-    justify-content:center;
+    justify-content: center;
     margin-bottom: 30px;
 }
 
@@ -581,9 +358,6 @@ nav {
     background-color: var(--primary-color);
     color: var(--white);
 }
-
-
-
 
 /* Footer */
 footer {
@@ -690,22 +464,12 @@ footer {
         font-size: 1.8rem;
     }
     
-    .image-placeholder {
-        width: 250px;
-        height: 250px;
-        font-size: 6rem;
-    }
-    
     .projects-grid {
         grid-template-columns: 1fr;
     }
 }
 
-
-/* ============================================
-   CAROUSEL "PORTFOLIO" REPETIDO
-   ============================================ */
-
+/* CAROUSEL "PORTFOLIO" REPETIDO */
 .portfolio-carousel-container {
     margin: 0;
     padding: 5px;
@@ -715,30 +479,12 @@ footer {
     background-color: #5a002b;
 }
 
-
-.portfolio-carousel-container::before {
-    left: 0;
-    background: linear-gradient(to right, 
-        #1d151a 0%, 
-        rgba(29, 21, 26, 0.8) 50%,
-        rgba(29, 21, 26, 0) 100%);
-}
-
-.portfolio-carousel-container::after {
-    right: 0;
-    background: linear-gradient(to left, 
-        #1d151a 0%,     
-        rgba(29, 21, 26, 0.8) 50%,
-        rgba(29, 21, 26, 0) 100%);
-}
-
 .portfolio-carousel {
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-/* Fila de texto */
 .portfolio-track {
     display: flex;
     gap: 40px;
@@ -746,32 +492,24 @@ footer {
     width: max-content;
 }
 
-/* Dirección contraria para segunda fila */
-.portfolio-track.reverse {
-    animation: scrollPortfolioReverse 35s linear infinite;
-}
-
-/* Cada texto "portafolio" */
 .portfolio-text {
     flex-shrink: 0;
-    color: #ffffff; /* Color tipografía */
+    color: #ffffff;
     font-size: 2rem;
     font-weight: 900;
     font-family: "poppins", sans-serif;
-    text-transform:uppercase;
+    text-transform: uppercase;
     letter-spacing: 1px;
     white-space: nowrap;
     transition: all 0.3s ease;
     margin-top: 5px;
 }
 
-/* Efecto hover sutil */
 .portfolio-text:hover {
     color: rgba(153, 150, 147, 0.5);
     transform: scale(1.05);
 }
 
-/* Animaciones */
 @keyframes scrollPortfolio {
     0% {
         transform: translateX(0);
@@ -781,24 +519,8 @@ footer {
     }
 }
 
-@keyframes scrollPortfolioReverse {
-    0% {
-        transform: translateX(calc(-50% - 20px));
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-
-
-/* Responsive */
+/* Responsive carousel */
 @media (max-width: 768px) {
-    .portfolio-carousel-container {
-        margin: 40px 0;
-        padding: 30px 0;
-    }
-    
     .portfolio-text {
         font-size: 3rem;
         gap: 25px;
@@ -807,15 +529,6 @@ footer {
     .portfolio-track {
         gap: 25px;
         animation: scrollPortfolio 30s linear infinite;
-    }
-    
-    .portfolio-track.reverse {
-        animation: scrollPortfolioReverse 25s linear infinite;
-    }
-    
-    .portfolio-carousel-container::before,
-    .portfolio-carousel-container::after {
-        width: 60px;
     }
 }
 
@@ -829,12 +542,7 @@ footer {
     }
 }
 
-
-
-/* ============================================
-   ESTILOS PARA EL BOTÓN DE CURRÍCULUM
-   ============================================ */
-
+/* BOTÓN DE CURRÍCULUM */
 .btn-cv {
     display: inline-flex;
     align-items: center;
@@ -855,7 +563,6 @@ footer {
 }
 
 .btn-cv:hover {
- 
     background-color: var(--primary-dark);
     border-color: var(--primary-dark);
 }
@@ -864,10 +571,7 @@ footer {
     font-size: 1.1rem;
 }
 
-/* ============================================
-   ESTILOS PARA EL MODAL/POPUP
-   ============================================ */
-
+/* MODAL/POPUP */
 .modal {
     display: none;
     position: fixed;
@@ -918,15 +622,15 @@ footer {
     align-items: center;
     padding: 25px 30px;
     border-bottom: 1px solid #eee;
-    background-color: #f9f9f9;
     border-radius: 20px 20px 0 0;
     position: sticky;
     top: 0;
     z-index: 10;
+    background-color: #ffffff;
 }
 
 .modal-header h2 {
-    color: #1d151a;
+    color: #4a0020;
     margin: 0;
     font-size: 2rem;
 }
@@ -936,7 +640,7 @@ footer {
     border: none;
     font-size: 2.5rem;
     color: #999693;
-    cursor: pointer;
+    cursor: pointer; 
     line-height: 1;
     padding: 0;
     width: 40px;
@@ -958,12 +662,9 @@ footer {
     padding: 30px;
 }
 
-/* ============================================
-   ESTILOS PARA EL CONTENIDO DEL CURRÍCULUM
-   ============================================ */
-
+/* CONTENIDO DEL CURRÍCULUM */
 .cv-content {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Raleway', sans-serif;
     color: #333;
 }
 
@@ -986,18 +687,13 @@ footer {
     display: flex;
     align-items: center;
     gap: 10px;
+    text-transform: uppercase;
 }
 
 .cv-section h3 i {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
-.cv-info {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    border-left: 4px solid #5a002b;
-}
 
 .cv-info p {
     margin-bottom: 8px;
@@ -1018,8 +714,7 @@ footer {
 
 .cv-item {
     margin-bottom: 25px;
-    padding-left: 15px;
-    border-left: 3px solid #999693;
+
 }
 
 .cv-item:last-child {
@@ -1058,8 +753,7 @@ footer {
 .skill-category {
     background-color: #f9f9f9;
     padding: 20px;
-    border-radius: 10px;
-    border-top: 4px solid #5a002b;
+    border-radius: 15%;
 }
 
 .skill-category h4 {
@@ -1115,74 +809,14 @@ footer {
 .btn-close-cv:hover {
     background-color: #999693;
     color: white;
-    
 }
 
-/* ============================================
-   RESPONSIVE PARA EL MODAL
-   ============================================ */
 
-@media (max-width: 768px) {
-    .modal-content {
-        width: 95%;
-        margin: 20px auto;
-    }
-    
-    .modal-header {
-        padding: 20px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
-    
-    .modal-header h2 {
-        font-size: 1.5rem;
-    }
-    
-    .close-modal {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-    }
-    
-    .modal-body {
-        padding: 20px;
-    }
-    
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .cv-actions {
-        flex-direction: column;
-    }
-    
-    .btn-cv {
-        width: 100%;
-        justify-content: center;
-        
-    }
-}
-
-@media (max-width: 480px) {
-    .modal-content {
-        border-radius: 15px;
-    }
-    
-    .cv-section h3 {
-        font-size: 1.3rem;
-    }
-    
-    .cv-item h4 {
-        font-size: 1.1rem;
-    }
-}
-
-/* FRASE CSS */
+/* FRASE */
 .frase-contacto {
     background-color: #5a002b;
     text-align: center;
-    height: 100Vh;
+    height: 100vh;
     align-content: center;
 }
 
@@ -1212,10 +846,7 @@ footer {
     margin-right: auto;
 }
 
-/* ============================================
-   FORMULARIO DE CONTACTO SIMPLE Y CENTRADO
-   ============================================ */
-
+/* FORMULARIO DE CONTACTO */
 .contact-title {
     color: #1d151a;
     font-size: 3rem;
@@ -1226,7 +857,6 @@ footer {
     text-transform: uppercase;
     letter-spacing: 1px;
     width: 100%;
-
 }
 
 .contact-form-simple {
@@ -1239,14 +869,13 @@ footer {
 }
 
 .form-group-simple {
-
     width: 100%;
 }
 
 .form-group-simple input,
 .form-group-simple textarea {
     width: 100%;
-    padding: 12px 0; 
+    padding: 12px 0;
     border: none;
     border-bottom: 2px solid #999693;
     background-color: transparent;
@@ -1268,29 +897,31 @@ footer {
     color: #999693;
     font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 1px; /* MÁS ESPACIADO */
-    font-size: 1rem; /* MÁS GRANDE COMO LA IMAGEN */
+    letter-spacing: 1px;
+    font-size: 1rem;
 }
 
 .form-group-simple input:focus,
 .form-group-simple textarea:focus {
-        outline: none;
+    outline: none;
     border-bottom-color: #5a002b;
     background-color: transparent;
-    padding-left: 10px; /* PEQUEÑO EFECTO AL FOCUS */
+    padding-left: 10px;
 }
 
 .btn-primary-simple {
-    width: auto; /* ANCHO AUTOMÁTICO */
-    min-width: 200px; /* ANCHO MÍNIMO */
-    padding: 12px 40px; /* MÁS PADDING HORIZONTAL */
-    margin: 40px auto 0; /* CENTRADO Y MÁRGENES */
+    width: auto;
+    min-width: 200px;
+    padding: 12px 40px;
+    margin: 40px auto 0;
     border: 2px solid #5a002b;
     border-radius: 50px;
     font-family: "poppins", sans-serif;
     background-color: #5a002b;
     color: var(--white);
     font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
 }
 
 .btn-primary-simple:hover {
@@ -1300,7 +931,6 @@ footer {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* AJUSTES PARA EL CONTENEDOR DEL FORMULARIO */
 #contacto .contact-content {
     display: flex;
     flex-direction: column;
@@ -1310,60 +940,11 @@ footer {
     padding: 40px 20px;
 }
 
-/* SI QUIERES MÁS ESPACIO ENTRE LOS CAMPOS */
 .form-group-simple + .form-group-simple {
     margin-top: 40px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .contact-form-simple {
-        max-width: 90%;
-        padding: 10px;
-    }
-    
-    .form-group-simple input,
-    .form-group-simple textarea,
-    .form-group-simple input::placeholder,
-    .form-group-simple textarea::placeholder {
-        font-size: 1.1rem;
-    }
-    
-    .btn-primary-simple {
-        min-width: 180px;
-        padding: 10px 30px;
-        font-size: 1rem;
-    }
-    
-    .form-group-simple + .form-group-simple {
-        margin-top: 30px;
-    }
-}
-
-@media (max-width: 480px) {
-    .contact-form-simple {
-        max-width: 100%;
-    }
-    
-    .form-group-simple input,
-    .form-group-simple textarea,
-    .form-group-simple input::placeholder,
-    .form-group-simple textarea::placeholder {
-        font-size: 1rem;
-    }
-    
-    .btn-primary-simple {
-        width: 100%; /* EN MÓVIL OCUPA TODO EL ANCHO */
-        max-width: 300px;
-        min-width: unset;
-    }
-}
-
-
-/* ============================================
-   SECCIÓN PROYECTOS DESTACADOS - TARJETAS VERTICALES
-   ============================================ */
-
+/* SECCIÓN PROYECTOS DESTACADOS */
 .section-proyectos-destacados {
     padding: 100px 20px;
     background-color: #ffffff;
@@ -1385,7 +966,6 @@ footer {
     font-family: "poppins", sans-serif;
 }
 
-/* Grid de tarjetas */
 .proyectos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -1393,7 +973,6 @@ footer {
     margin-bottom: 60px;
 }
 
-/* Tarjeta individual */
 .proyecto-tarjeta {
     background: #ffffff;
     border-radius: 20px;
@@ -1411,7 +990,6 @@ footer {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
-/* Categoría */
 .proyecto-categoria {
     padding: 12px 25px;
     background-color: #5a002b;
@@ -1424,23 +1002,9 @@ footer {
     text-align: center;
 }
 
-/* Contenedor de imagen - VERSIÓN VERTICAL */
 .proyecto-imagen-contenedor {
-    height: 450px; 
+    height: 450px;
     overflow: hidden;
-    position: relative;
-}
-
-/* Opción con ratio fijo 2:3 (muy vertical) */
-.proyecto-imagen-contenedor.ratio-2-3 {
-    height: 0;
-    padding-bottom: 150%; /* Ratio 2:3 = 3/2 = 1.5 = 150% */
-    position: relative;
-}
-
-.proyecto-imagen-contenedor.ratio-4-5 {
-    height: 0;
-    padding-bottom: 125%; /* Ratio 4:5 = 5/4 = 1.25 = 125% */
     position: relative;
 }
 
@@ -1448,31 +1012,14 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center top; /* Recorta desde la parte superior */
+    object-position: center top;
     transition: transform 0.5s ease;
-}
-
-/* Para imágenes en contenedores con ratio */
-.proyecto-imagen-contenedor.ratio-2-3 .proyecto-imagen,
-.proyecto-imagen-contenedor.ratio-4-5 .proyecto-imagen {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-/* Recorte más agresivo si es necesario */
-.proyecto-imagen.recortada {
-    object-fit: cover;
-    object-position: center 25%; /* Ajusta este valor: 0% = parte superior, 100% = parte inferior */
 }
 
 .proyecto-tarjeta:hover .proyecto-imagen {
     transform: scale(1.05);
 }
 
-/* Información de la tarjeta */
 .proyecto-info {
     padding: 20px;
     flex-grow: 1;
@@ -1481,26 +1028,16 @@ footer {
 }
 
 .proyecto-titulo {
-    font-size: 1.1zrem;
+    font-size: 1.5rem;
     font-weight: 800;
     color: #1d151a;
     margin-bottom: 8px;
     font-family: "poppins", sans-serif;
-    line-height: 1.3;
-}
-
-.proyecto-descripcion {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #666;
-    margin-bottom: 5px;
-    flex-grow: 1;
-    font-family: 'Lato', sans-serif;
+    line-height: 1;
+    text-align: center;
 }
 
 
-
-/* Botón "Ver más proyectos" */
 .ver-mas-contenedor {
     text-align: center;
     margin-top: 15px;
@@ -1536,10 +1073,7 @@ footer {
     transform: translateX(5px);
 }
 
-/* ============================================
-   RESPONSIVE
-   ============================================ */
-
+/* RESPONSIVE PROYECTOS */
 @media (max-width: 1200px) {
     .proyectos-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1655,5 +1189,156 @@ footer {
         justify-content: center;
     }
 }
+
+/* RESPONSIVE MODAL */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 20px auto;
+    }
+    
+    .modal-header {
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .modal-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .close-modal {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    
+    .modal-body {
+        padding: 20px;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cv-actions {
+        flex-direction: column;
+    }
+    
+    .btn-cv {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        border-radius: 15px;
+    }
+    
+    .cv-section h3 {
+        font-size: 1.3rem;
+    }
+    
+    .cv-item h4 {
+        font-size: 1.1rem;
+    }
+}
+
+/* RESPONSIVE SOBRE MÍ */
+@media (max-width: 768px) {
+    .sobre-mi-simple {
+        padding: 60px 20px;
+    }
+    
+    .sobre-mi-simple-titulo {
+        font-size: 2.5rem;
+    }
+    
+    .sobre-mi-simple-texto {
+        font-size: 1.1rem;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .sobre-mi-simple-titulo {
+        font-size: 2rem;
+    }
+    
+    .sobre-mi-simple-texto {
+        font-size: 1rem;
+    }
+    
+    .btn-cv {
+        width: 100%;
+        padding: 12px 24px;
+    }
+}
+
+/* RESPONSIVE FORMULARIO */
+@media (max-width: 768px) {
+    .contact-form-simple {
+        max-width: 90%;
+        padding: 10px;
+    }
+    
+    .form-group-simple input,
+    .form-group-simple textarea,
+    .form-group-simple input::placeholder,
+    .form-group-simple textarea::placeholder {
+        font-size: 1.1rem;
+    }
+    
+    .btn-primary-simple {
+        min-width: 180px;
+        padding: 10px 30px;
+        font-size: 1rem;
+    }
+    
+    .form-group-simple + .form-group-simple {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form-simple {
+        max-width: 100%;
+    }
+    
+    .form-group-simple input,
+    .form-group-simple textarea,
+    .form-group-simple input::placeholder,
+    .form-group-simple textarea::placeholder {
+        font-size: 1rem;
+    }
+    
+    .btn-primary-simple {
+        width: 100%;
+        max-width: 300px;
+        min-width: unset;
+    }
+}
+
+/* ANIMACIONES */
+.timeline-item, .project-card, .stat-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.timeline-item.animate-in, .project-card.animate-in, .stat-item.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline-item:nth-child(2) { transition-delay: 0.2s; }
+.timeline-item:nth-child(3) { transition-delay: 0.4s; }
+.project-card:nth-child(2) { transition-delay: 0.2s; }
+.project-card:nth-child(3) { transition-delay: 0.4s; }
+.stat-item:nth-child(2) { transition-delay: 0.1s; }
+.stat-item:nth-child(3) { transition-delay: 0.2s; }
+.stat-item:nth-child(4) { transition-delay: 0.3s; }
 
 
